@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>	
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <BuildVersion>$([System.DateTime]::UtcNow.Subtract($([System.DateTime]::new(2020,1,1))).TotalDays.ToString("0"))</BuildVersion>
+    <VersionPrefix>$(ReleaseVersion)</VersionPrefix>
+    <Version>$(ReleaseVersion).$(BuildVersion)</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <Product>$(AssemblyName) $(Version)</Product>
+    <Authors>Marco Miltenburg</Authors>
+    <Copyright>Copyright © 2020-$([System.DateTime]::UtcNow.Year) $(Authors)</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+</Project>
