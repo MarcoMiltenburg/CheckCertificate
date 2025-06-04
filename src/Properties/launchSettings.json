@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CheckCertificate": {
+      "commandName": "Project",
+      "commandLineArgs": "www.virtualpages.nl --warningdays 100"
+    }
+  }
+}
